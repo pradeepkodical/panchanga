@@ -1,0 +1,175 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eee;
+  overflow-x: hidden;
+}
+
+.nav-menu {
+  padding: 8px;
+}
+
+.nav-menu a {
+  background-color: #fa6400;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: rgb(117 124 130) 0px 0px 2px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+/* CSS */
+.btn-primary {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.tithi-header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #c8500050;
+  backdrop-filter: blur(6px);
+  background-color: transparent;
+}
+
+.tithi-header a {
+  text-decoration: none;
+}
+
+.tithi-header .x-items {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tithi-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #eee;
+  padding: 8px;
+}
+
+.tithi-desc {
+  margin: 0 8px;
+  max-width: 250px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(159 162 191 / 18%) 0px 9px 16px,
+    rgb(159 162 191 / 32%) 0px 2px 2px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.tithi-desc h4 {
+  margin: 8px 0;
+}
+
+#myCanvas {
+  box-shadow: rgb(117 124 130) 0px 0px 2px;
+  border-radius: 8px;
+}
+
+.tithi-desc p {
+  text-align: center;
+}
+.tithi-desc img {
+  border-radius: 8px 8px 0 0;
+}
+
+.styled-table {
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+.styled-table thead tr {
+  background-color: #fb8332;
+  color: #ffffff;
+  text-align: left;
+  border-radius: 8px 8px 0 0;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table th:first-of-type {
+  border-radius: 8px 0 0 0;
+}
+
+.styled-table th:last-of-type {
+  border-radius: 0 8px 0 0;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #fb8332;
+  border-radius: 0 0 8px 8px;
+}
+
+section {
+  margin-top: 70px;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+section:nth-of-type(odd) {
+  background: #fff;
+}

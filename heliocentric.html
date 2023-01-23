@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HSS - Tithi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <hss-panchanga-topbar>
+      <hss-panchanga-navbar></hss-panchanga-navbar>
+    </hss-panchanga-topbar>
+
+    <section id="animSection">
+      <div style="text-align: center; padding: 8px 0">
+        <h3>Point of View from sun</h3>
+        <p>Moon takes about 27.3 earth days to go arround earth.</p>
+        <p>Earth takes about 365.25 days to go arround sun.</p>
+        <div>
+          <button class="btn-primary" data-bind="click: doToggleAnimate">
+            Animate
+          </button>
+          <button class="btn-primary" data-bind="click: doSpeedUp">
+            Accelerate
+          </button>
+          <button class="btn-primary" data-bind="click: doSpeedDown">
+            Decelerate
+          </button>
+        </div>
+      </div>
+      <div class="tithi-container">
+        <canvas width="1000px" height="800px"></canvas>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/knockout-3.5.1.min.js"></script>
+    <script src="js/tithis.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/helioscentric.js"></script>
+  </body>
+</html>

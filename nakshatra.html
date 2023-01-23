@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HSS - Tithi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <hss-panchanga-topbar>
+      <hss-panchanga-navbar></hss-panchanga-navbar>
+    </hss-panchanga-topbar>
+
+    <section id="animSection">
+      <div style="text-align: center; padding: 8px 0">
+        <h3>Point of View from earth</h3>
+        <p>
+          In reality moon moves counter clockwise arround earth, Since earth is
+          also spinning it appears that moon is lagging from sun.
+        </p>
+        <div>
+          <button class="btn-primary" data-bind="click: doToggleAnimate">
+            Animate
+          </button>
+          <button class="btn-primary" data-bind="click: doSpeedUp">
+            Accelerate
+          </button>
+          <button class="btn-primary" data-bind="click: doSpeedDown">
+            Decelerate
+          </button>
+        </div>
+      </div>
+      <div class="tithi-container">
+        <canvas width="1000px" height="800px"></canvas>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/knockout-3.5.1.min.js"></script>
+    <script src="js/tithis.js"></script>
+    <script src="js/nakshatras.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/geonakshatra.js"></script>
+  </body>
+</html>

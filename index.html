@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>HSS - Tithi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <hss-panchanga-topbar></hss-panchanga-topbar>
+
+    <section>
+      <div class="container">
+        <div>
+          <b>Tithi: </b>
+          <p>
+            The moment of new Moon, or that point of time when the longitudes of
+            Sun and Moon are equal is called ‘amavasya’. The tithi is the time
+            taken by the Moon in increasing its distance from the Sun by 12
+            degrees. The complete revolution of the Moon (29.5 days) occupies 30
+            tithis for 360 degrees. Since the motions of the Sun and Moon are
+            always varying in speed the length of a tithi constantly alters
+          </p>
+
+          <p>
+            Calculation of Tithi The simplest definition of a tithi is that, it
+            is the phase of Moon on a given time of the year (DOY). Since the
+            Moon has a periodicity of 29.5 days and since a year begins with
+            Sunrise at Gudi Padwa (the day after the New Moon day at the
+            beginning of spring. In the year 300 AD, spring began on the
+            amavasya that heralded the month of Chaitra), in its most simple
+            form the tithi on a specific day of the year,
+          </p>
+
+          <p>
+            tithi(DOY) can be calculated as tithi(DOY) = longitude of Moon –
+            Longitude of Sun (of the orbit of 360° )
+          </p>
+
+          <p>
+            In order to map it with observable parameters, an additional factor
+            is added into this formulation. The 30 tithis (from Full Moon to New
+            Moon and back) are given
+          </p>
+
+          <p>
+            table 1. The waning phase (from Full Moon to New Moon) is called
+            Krishna Paksha and the waxing phase (from New Moon to Full Moon) is
+            called Shukla Paksha and the names of tithis are reversed.
+          </p>
+
+          <div>
+            <table class="styled-table" width="100%">
+              <thead>
+                <tr>
+                  <th>Number</th>
+                  <th>Phase</th>
+                  <th>Tithi</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody data-bind="foreach: tithis">
+                <tr>
+                  <td data-bind="text: $index() + 1"></td>
+                  <td data-bind="text: paksha"></td>
+                  <td data-bind="text: tithi"></td>
+                  <td data-bind="text: description"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h4>How long is a Tithi?</h4>
+        <p>
+          The movements of the sun and the moon keep varying in speed. Hence,
+          the length of a Tithi keeps changing. A tithi can be upto 26 hours in
+          length, and it can be as less as 21 hours 34 minutes and 24 seconds.
+          The time a tithi begins alters with the general time followed in each
+          country.
+        </p>
+        <p>
+          Sometimes a tithi can begin and end on the same day. In that case,
+          there will be two tithis in one day. For instance, one may see a
+          Tritiya and Chaturthi on the same day
+        </p>
+
+        <p>
+          Sometimes a tithi can overlap into the following day. In that case,
+          there will be two same tithis on two consecutive days. For instance,
+          it will be Tritiya on Sunday and Monday.
+        </p>
+
+        <p>
+          Those days that have two Beginning or End points of tithis are
+          regarded as inauspicious. The same applies if there are no beginning
+          or end points of tithis.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h4>Nakshatra</h4>
+        <p>
+          In order to map this movement in the sky, different paths of the
+          movement of the Moon are divided as per the nearest star or
+          constellation. The names of the 27 regions, called the 27 Nakshatras
+          that make this path are given in table 2. These are used to define a
+          month. The name of a lunar month is given by the location of the Moon
+          on the Full Moon day. Each region is about 13o 20¢ in the sky.
+        </p>
+        <div>
+          <table class="styled-table" width="100%">
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody data-bind="foreach: nakshatras">
+              <tr>
+                <td data-bind="text: $index() + 1"></td>
+                <td data-bind="text: name"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h3>What is this?</h3>
+        <img
+          src="images/stemple.png"
+          width="100%"
+          data-bind="click: $data.toggleTemple.bind($data)"
+        />
+        <div data-bind="if: showTemple">
+          <h3>Vidyashankara Temple</h3>
+          <p>
+            Twelve pillars surround the mantappa with figures of the twelve
+            signs of the zodiac. They are constructed in such an ingenious way
+            that the rays of the sun fall on each pillar in the chronological
+            order of the twelve months of the Hindu calendar. Each column is
+            topped by a Yali with a rolling stone ball in its mouth
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="animSection">
+      <div style="text-align: center; padding: 8px 0">
+        <h3>Point of View from earth</h3>
+        <p>
+          In reality moon moves counter clockwise arround earth, Since earth is
+          also spinning it appears that moon is lagging from sun.
+        </p>
+        <hss-panchanga-navbar></hss-panchanga-navbar>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/knockout-3.5.1.min.js"></script>
+    <script src="js/tithis.js"></script>
+    <script src="js/nakshatras.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
