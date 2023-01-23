@@ -22,7 +22,7 @@ ko.components.register('hss-panchanga-topbar', {
   template: `<div class="tithi-header">
   <div style="display: flex; align-items: center; padding: 0 24px">
     <a href="index.html"><img src="images/hss.png" height="60px" /></a>
-    <a href="index.html"> <h2 style="flex: 1; color: #c85000; padding-left: 8px;"> HSS - Panchanga - Tithi</h2> </a>
+    <a href="index.html"> <h2 class="title hidden-sm"> HSS - Panchanga - Tithi</h2> </a>
     <div class="x-items" data-bind="template: {nodes: nodes}"></div>
   </div>
 </div>`,

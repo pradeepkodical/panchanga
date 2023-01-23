@@ -6,6 +6,9 @@ body {
 
 .nav-menu {
   padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 4px;
 }
 
 .nav-menu a {
@@ -16,6 +19,7 @@ body {
   color: #fff;
   text-decoration: none;
   transition: all 250ms;
+  white-space: nowrap;
 }
 
 /* CSS */
@@ -81,6 +85,18 @@ body {
 
 .tithi-header a {
   text-decoration: none;
+}
+
+.tithi-header h2.title {
+  flex: 1;
+  color: #c85000;
+  padding-left: 8px;
+}
+
+@media (max-width: 767px) {
+  .hidden-sm {
+    display: none;
+  }
 }
 
 .tithi-header .x-items {
